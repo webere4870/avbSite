@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://kit.fontawesome.com/dfda23e54c.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="mainPage">
+        <div class="downButton">
+            <a href="#secondPage"><i class="fas fa-arrow-down"></i></a>
+        </div>
+        <div class="xButton">
+            <i class="fas fa-times" onclick="closeItem()"></i>
+        </div>
+        <div class="hamburger" onclick="openSmallMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="navigationBar">
+            <a href="#" style="text-decoration: underline; text-decoration-color: yellow;">Home</a>
+            <a href="#">Our Story</a>
+            <a href="#"><img src="/images/secondNew.png" alt="" class="mainLogo"></a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+        <!-- <div class="navigationBar">
+            <a href="#" class="hardLeft"><img src="/images/secondNew.png" alt="" class="mainLogo"></a>
+            <a href="#">Home</a>
+            <a href="#">Our Story</a>
+            <a href="#">Services</a>
+            <a href="#">Contact Us</a>
+        </div> -->
+        <div class="smallNavigationBar">
+            
+            <a href="#"><img src="/images/secondNew.png" alt="" class="mainLogo"></a>
+            <a href="#">Home</a>
+            <a href="#">Our Story</a>
+            <a href="#">Services</a>
+            <a href="#">Contact Us</a>
+            <div class="socialMedia">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-instagram-square"></i>
+                <i class="fab fa-snapchat-square"></i>
+            </div>
+        </div>
+        <div class="leftAlignPage">
+            <h1 class="leftAlign">Excavation and Concrete</h1>
+            <span>Meeting customer needs since 2018</span>
+            <div class="buttonRow">
+                <button>Services</button>
+                <button>Contact Us</button>
+            </div>
+        </div>
+    </div>
+    <div id="secondPage">
+        <div class="secondBlock">
+            
+            <div class="slideLeft">
+                <img src="/images/hexagon.png" style="width: 300px;" alt="">
+            </div>
+            <div class="slideRight">
+                <h1>About Us</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum voluptate repellat tempora voluptatum, vero alias exercitationem dolorem. Quis velit fugit officiis esse nesciunt error sit quam? Saepe odio excepturi sunt.</p>
+            </div>
+        </div>
+        <h1 style="color: white; padding-top: 20px;">What to Expect</h1>
+        <div class="firstBlock">
+            <div class="bulletPoint">
+                <div class="floatingNumber">
+                    <h1>1</h1>
+                </div>
+                <div class="circlePoint">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <p>Receive an Estimate</p>
+            </div>
+            <div class="bulletPoint">
+                <div class="floatingNumber">
+                    <h1>2</h1>
+                </div>
+                <div class="circlePoint">
+                    <i class="fas fa-drafting-compass"></i>
+                </div>
+                <p>Draw up a Plan</p>
+            </div>
+            <div class="bulletPoint">
+                <div class="floatingNumber">
+                    <h1>3</h1>
+                </div>
+                <div class="circlePoint">
+                    <i class="far fa-calendar-alt"></i>
+                </div>
+                <p>Schedule a Time</p>
+            </div>
+            <div class="bulletPoint">
+                <div class="floatingNumber">
+                    <h1>4</h1>
+                </div>
+                <div class="circlePoint">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <p>Build</p>
+            </div>
+        </div>
+    </div>
+    <script src="control.js">
+
+    </script>
+</body>
+</html>

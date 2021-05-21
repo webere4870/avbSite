@@ -1,0 +1,377 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    max-width: 100vw;
+}
+
+a
+{
+    color: white;
+    text-decoration: none;
+    font-family: 'Poiret One', cursive;
+}
+
+.navigationBar a
+{
+    padding: 0 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.hamburger:hover
+{
+    cursor: pointer;
+}
+
+.mainPage
+{
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background: linear-gradient(to right, rgba(0,0,0,.9), rgba(0,0,0,.3)), url('./images/background4.jpg');
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    animation: backgroundChange;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+.hamburger
+{
+    display: none;
+    color: white;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.hamburger i
+    {
+        color: white;
+        font-size: 30px;
+    }
+
+.navigationBar
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.smallNavigationBar
+{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgb(68, 124, 161), rgb(0,0,0));
+    z-index: 2000;
+}
+
+.smallNavigationBar *
+{
+    font-size: 22px;
+    padding: 10px 0;
+}
+
+.fa-times
+{
+    color: white;
+    font-size: 25px;
+    z-index: 20001;
+}
+
+.xButton
+{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 20000;
+    display: none;
+}
+
+.xButton:hover
+{
+    cursor: pointer;
+}
+
+.socialMedia i
+{
+    color: white;
+    font-size: 40px;
+    padding: 10px 5px;
+}
+
+.mainLogo
+{
+    width: 125px;
+    justify-self: flex-start;
+}
+
+ .hardLeft
+{
+    margin-right: auto;
+    margin-left: 10px;
+}
+
+.signature
+{
+    height: 250px;
+    width: 250px;
+    background: url('./images/hexagonFinal.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigationBar img
+{
+    height: 80px;
+    width: auto;
+}
+
+h1{
+    color: white;
+    font-family: 'Poiret One', cursive;
+    font-size: 60px;
+}
+
+span
+{
+    font-family: 'Poiret One', cursive;
+    color: white;
+    font-size: 25px;
+    font-style: italic;
+    padding: 10px 0;
+}
+
+.buttonRow
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+button
+{
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: white;
+    border: 2px solid white;
+    font-family: 'Poiret One', cursive;
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1));
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+.leftAlignPage
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.downButton
+{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    bottom: 10px;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.downButton:hover
+{
+    cursor: pointer;
+}
+
+#secondPage
+{
+    background: rgb(0, 47, 78);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#secondPage h1
+{
+    color: rgb(0, 47, 78);
+    text-align: center;
+}
+
+.firstBlock
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0;
+    background: rgb(0, 47, 78);
+}
+
+.bulletPoint
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-evenly;
+    text-align: center;
+    background: white;
+    height: 250px;
+    width: 250px;
+    margin: 20px 0;
+    border-radius: 6px;
+}
+
+.floatingNumber
+{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background: yellow;
+    border: 7px solid rgb(0, 47, 78);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -25px;
+    left: calc(100px);
+}
+
+.floatingNumber h1
+{
+    color: rgb(0, 47, 78);
+    font-size: 30px;
+}
+
+.circlePoint
+{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 6px solid rgb(0, 47, 78); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+p
+{
+    color: rgb(0, 47, 78);
+    font-family: 'Poiret One', cursive;
+    font-size: 25px;
+}
+
+.circlePoint i
+{
+    color: rgb(0, 47, 78);
+    font-size: 60px;
+}
+
+.circlePoint
+{
+    margin: 0px 70px;
+}
+
+.secondBlock
+{
+    width: 100%;
+    height: 100%;
+    background: rgb(250, 250, 250);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 400px;
+}
+
+.slideLeft
+{
+    min-width: 50%;
+    background: gray;
+}
+
+.slideRight
+{
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    border-left: 6px solid yellow;
+}
+
+.slideRight *
+{
+    padding-left: 10px;
+    text-align: left;
+}
+
+/* @keyframes backgroundChange
+{
+    0%
+    {
+        background: linear-gradient(to right, rgba(0,0,0,.9), rgba(0,0,0,.3)), url('./images/background4.jpg');
+    }
+    25%
+    {
+        background: linear-gradient(to right, rgba(0,0,0,.9), rgba(0,0,0,.3)), url('./images/background.jpeg');
+    }
+    50%
+    {
+        background: linear-gradient(to right, rgba(0,0,0,.9), rgba(0,0,0,.3)), url('./images/background2.jpeg');
+    }
+    75%
+    {
+        background: linear-gradient(to right, rgba(0,0,0,.9), rgba(0,0,0,.3)), url('./images/background3.jpg');
+    }
+    100%
+    {
+        background: linear-gradient(to right, rgba(0,0,0,.9), rgba(0,0,0,.3)), url('./images/background4.jpg');
+    }
+} */
+
+@media only screen and (max-width: 800px)
+{
+    .navigationBar
+    {
+        display: none;
+    }
+    .hamburger
+    {
+        display: flex;
+    }
+}
