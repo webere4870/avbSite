@@ -14,29 +14,56 @@
 <body>
     
     <div class="mainPage">
-        <div class="downButton">
-            <a href="#secondPage"><i class="fas fa-arrow-down"></i></a>
+        <div id="testSlideShow">
+            <!-- <a href="/images/background.jpeg"><img src="/images/background.jpeg" alt=""></a>
+            <a href="/images/background2.jpeg"><img src="/images/background2.jpeg" alt=""></a>
+            <a href="/images/background3.jpg"><img src="/images/background3.jpg" alt=""></a>
+            <a href="/images/background4.jpg"><img src="/images/background4.jpg" alt=""></a> -->
+            <div class="homeSlide" id="slide1">
+                
+            </div>
+            <div class="homeSlide" id="slide2">
+                
+            </div>
+            <div class="homeSlide" id="slide3">
+                
+            </div>
+            <div class="homeSlide" id="slide4">
+                
+            </div>
+            <div class="homeSlide" id="slide5">
+                
+            </div>
         </div>
+        <!-- <div class="downButton">
+            <a href="#secondPage"><i class="fas fa-arrow-down"></i></a>
+        </div> -->
         <div class="xButton">
             <i class="fas fa-times" onclick="closeItem()"></i>
+        </div>
+        <div class="smallLogo">
+            <a href="#"><img src="/images/secondNew.png" alt="" class="mainLogo"></a>
         </div>
         <div class="hamburger" onclick="openSmallMenu()">
             <i class="fas fa-bars"></i>
         </div>
-        <div class="navigationBar">
+        <!-- <div class="navigationBar">
             <a href="#" style="text-decoration: underline; text-decoration-color: yellow;">Home</a>
             <a href="#">Our Story</a>
             <a href="#"><img src="/images/secondNew.png" alt="" class="mainLogo"></a>
             <a href="#">Services</a>
             <a href="#">Contact</a>
+        </div> -->
+        <div class="overlay">
+            
         </div>
-        <!-- <div class="navigationBar">
+        <div class="navigationBar">
             <a href="#" class="hardLeft"><img src="/images/secondNew.png" alt="" class="mainLogo"></a>
-            <a href="#">Home</a>
+            <a href="#" style="text-decoration: underline; text-underline-offset: 5px; text-decoration-color: #8E793E;">Home</a>
             <a href="#">Our Story</a>
             <a href="#">Services</a>
             <a href="#">Contact Us</a>
-        </div> -->
+        </div> 
         <div class="smallNavigationBar">
             
             <a href="#"><img src="/images/secondNew.png" alt="" class="mainLogo"></a>
@@ -54,12 +81,12 @@
             <h1 class="leftAlign">Excavation and Concrete</h1>
             <span>Meeting customer needs since 2018</span>
             <div class="buttonRow">
-                <button>Services</button>
-                <button>Contact Us</button>
+                <button style="background: rgba(0,0,0,0); color: white;  border: 2px solid white;">Services</button>
+                <button style="color: white; background:#8E793E; border: none;">Contact Us</button>
             </div>
         </div>
     </div>
-    <div id="secondPage">
+    <!-- <div id="secondPage">
         <div class="secondBlock">
             
             <div class="slideLeft">
@@ -109,7 +136,7 @@
                 <p>Build</p>
             </div>
         </div>
-    </div>
+    </div> -->
     <script src="control.js">
 
     </script>

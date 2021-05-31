@@ -61,6 +61,21 @@ a
     position: absolute;
     top: 15px;
     right: 15px;
+    z-index: 100;
+}
+
+.smallLogo
+{
+    display: none;
+    z-index: 2000;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.smallLogo img
+{
+    width: 70px;
 }
 
 .hamburger i
@@ -91,7 +106,7 @@ a
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgb(68, 124, 161), rgb(0,0,0));
+    background: linear-gradient(#AD974F, rgb(0,0,0));
     z-index: 2000;
 }
 
@@ -181,12 +196,8 @@ span
 
 button
 {
-    padding: 10px 20px;
-    border-radius: 30px;
-    color: white;
-    border: 2px solid white;
+    padding: 8px 30px;
     font-family: 'Poiret One', cursive;
-    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1));
     font-size: 15px;
     font-weight: bold;
     margin: 0 5px;
@@ -199,6 +210,7 @@ button
     justify-content: center;
     align-items: center;
     text-align: center;
+    z-index: 50;
 }
 
 .downButton
@@ -263,7 +275,6 @@ button
     height: 50px;
     width: 50px;
     background: yellow;
-    border: 7px solid rgb(0, 47, 78);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -340,6 +351,95 @@ p
     text-align: left;
 }
 
+.overlay
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0,0,0,.8));
+}
+
+#testSlideShow
+{
+    position: absolute;
+    max-width: 100vw;
+    min-height: 100vh;
+    z-index: 0;
+    left: 0;
+    right: 0;
+}
+
+#testSlideShow div:nth-of-type(1)
+{
+    animation-name: changeBackground;
+    z-index: 20;
+    animation-duration: 2s;
+    animation-delay: 4s;
+}
+
+#testSlideShow div:nth-of-type(2)
+{
+    z-index: 15;
+}
+
+#testSlideShow div:nth-of-type(n+3)
+{
+    display: none;
+}
+
+#testSlideShow > a
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    
+}
+
+#testSlideShow img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.homeSlide
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+#slide1
+{
+    background: url('/images/background.jpeg');
+}
+
+#slide2
+{
+    background: url('/images/background2.jpeg');
+}
+
+#slide3
+{
+    background: url('/images/background3.jpg');
+}
+
+#slide4
+{
+    background: url('/images/background2.jpeg');
+}
+
+#slide5
+{
+    background: url('/images/background3.jpg');
+}
+
 /* @keyframes backgroundChange
 {
     0%
@@ -373,5 +473,21 @@ p
     .hamburger
     {
         display: flex;
+    }
+    .smallLogo
+    {
+        display: block;
+    }
+}
+
+@keyframes changeBackground 
+{
+    from
+    {
+        opacity: 1.0;
+    }
+    to
+    {
+        opacity: 0.0;
     }
 }
