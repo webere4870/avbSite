@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+:root{
+    --accentColor: #8E793E;
+}
+
 html
 {
     scroll-behavior: smooth;
@@ -69,8 +73,8 @@ a
     display: none;
     z-index: 2000;
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 8px;
+    left: 8px;
 }
 
 .smallLogo img
@@ -106,7 +110,7 @@ a
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(#AD974F, rgb(0,0,0));
+    background: linear-gradient(black, rgb(65, 64, 64));
     z-index: 2000;
 }
 
@@ -440,6 +444,87 @@ p
     background: url('/images/background3.jpg');
 }
 
+.loadingScreen
+{
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-width: 100vw;
+}
+
+.screenContainer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 250px;
+    width: 250px;
+}
+
+.loadingScreen img
+{
+    height: 200px;
+}
+
+.spinner{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    animation-name: rotation;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+#circle1
+{
+    animation-delay: 0s;
+}
+
+#circle2
+{
+    animation-delay: .1s;
+}
+
+#circle3
+{
+    animation-delay: .2s;
+}
+
+#circle4
+{
+    animation-delay: .3s;
+}
+
+#circle5
+{
+    animation-delay: .4s;
+}
+
+.spinner::before
+{
+    content: url('/images/whiteCircle2.png');
+}
+
+@keyframes rotation{
+    from
+    {
+        transform: rotate(0deg);
+    }
+    to
+    {
+        transform: rotate(360deg);
+    }
+}
+
 /* @keyframes backgroundChange
 {
     0%
@@ -463,6 +548,8 @@ p
         background: linear-gradient(to right, rgba(0,0,0,.9), rgba(0,0,0,.3)), url('./images/background4.jpg');
     }
 } */
+
+
 
 @media only screen and (max-width: 800px)
 {
