@@ -1,3 +1,21 @@
+let initialDisplay = document.querySelector('.animationControl');
+initialDisplay.style.display = 'none';
+
+window.onload = async function()
+ {
+    let myTime = await new Promise((resolve, reject) =>
+    {
+        setTimeout(()=>
+        {
+            resolve('nothing');
+        }, 3000);
+    });
+    let preLoader = document.querySelector('.loadingScreen');
+    preLoader.style.display = "none";
+    let body = document.querySelector('.animationControl');
+    body.style.display = 'block';
+ }
+
 window.addEventListener("DOMContentLoaded", function(e)
 {
  let slideShow = document.getElementById('testSlideShow');
