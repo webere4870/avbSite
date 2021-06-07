@@ -1,5 +1,11 @@
-let initialDisplay = document.querySelector('.animationControl');
-initialDisplay.style.display = 'none';
+let initialDisplay = document.querySelectorAll('.animationControl');
+for(let counter = 0; counter < initialDisplay.length; counter++)
+{
+    initialDisplay[counter].style.display = 'none';
+}
+
+let scrollAnimation = document.getElementById('snapScroll');
+scrollAnimation.addEventListener("scroll", fadeItems);
 
 window.onload = async function()
  {
@@ -10,10 +16,16 @@ window.onload = async function()
             resolve('nothing');
         }, 3000);
     });
-    let preLoader = document.querySelector('.loadingScreen');
-    preLoader.style.display = "none";
-    let body = document.querySelector('.animationControl');
-    body.style.display = 'block';
+    let preLoader = document.querySelectorAll('.loadingScreen');
+    for(let counter = 0; counter < preLoader.length; counter++)
+    {
+        preLoader[counter].style.display = "none";
+    }
+    let body = document.querySelectorAll('.animationControl');
+    for(let counter = 0; counter < preLoader.length; counter++)
+    {
+        body[counter].style.display = "flex";
+    }
  }
 
 window.addEventListener("DOMContentLoaded", function(e)
@@ -26,6 +38,31 @@ window.addEventListener("DOMContentLoaded", function(e)
      arr[counter].addEventListener("animationend", fadeComplete, false);
  }
 }, false)
+
+function fadeItems()
+{
+    
+    let myItem = document.querySelectorAll('#snapScroll h1');
+    for(let counter =0; counter<myItem.length; counter++)
+    {
+        let trueOrFalse = isInViewport(myItem[counter]);
+        if(trueOrFalse === true)
+        {
+            myItem[counter].style.transform = 'translateY(-50px)';
+        }
+    }
+    
+}
+
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
 
 // window.addEventListener("DOMContentLoaded", function(e) {
 
