@@ -7,16 +7,19 @@
 
 :root{
     --accentColor: #8E793E;
+    overflow-y: hidden;
 }
 
 html
 {
     scroll-behavior: smooth;
+    overflow-y: hidden;
 }
 
 body
 {
     max-width: 100vw;
+    overflow-y: hidden;
 }
 
 a
@@ -364,7 +367,7 @@ p
     height: 100%;
     width: 100%;
     position: absolute;
-    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0,0,0,.8));
+    background: linear-gradient(rgba(0, 0, 0, .65), rgba(0,0,0,.65));
 }
 
 #testSlideShow
@@ -425,27 +428,42 @@ p
 
 #slide1
 {
-    background: url('/images/background.jpeg');
+    background: url('/images/scroll2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 #slide2
 {
-    background: url('/images/background2.jpeg');
+    background: url('/images/scroll9.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 #slide3
 {
-    background: url('/images/background3.jpg');
+    background: url('/images/scroll3.JPG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 #slide4
 {
-    background: url('/images/background2.jpeg');
+    background: url('/images/scroll12.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 #slide5
 {
-    background: url('/images/background3.jpg');
+    background: url('/images/scroll7.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .loadingScreen
@@ -592,6 +610,7 @@ p
     max-width: 100vw;
     scroll-snap-type: y mandatory;
 	overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 .scroll
@@ -603,16 +622,25 @@ p
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #scroll1
 {
-    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url('/images/background.jpeg');
+    background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)), url('/images/scroll2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #scroll2
 {
-    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url('/images/background3.jpg');
+    background: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)), url('/images/scroll4.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #scroll3

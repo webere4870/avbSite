@@ -1,11 +1,9 @@
-let initialDisplay = document.querySelectorAll('.animationControl');
-for(let counter = 0; counter < initialDisplay.length; counter++)
-{
-    initialDisplay[counter].style.display = 'none';
-}
+let initialDisplay = document.querySelector('.animationControl');
+initialDisplay.style.display = 'none';
 
 let scrollAnimation = document.getElementById('snapScroll');
-scrollAnimation.addEventListener("scroll", fadeItems);
+
+document.addEventListener("scroll", fadeItems);
 
 window.onload = async function()
  {
@@ -24,7 +22,7 @@ window.onload = async function()
     let body = document.querySelectorAll('.animationControl');
     for(let counter = 0; counter < preLoader.length; counter++)
     {
-        body[counter].style.display = "flex";
+        body[counter].style.display = "block";
     }
  }
 
@@ -39,30 +37,32 @@ window.addEventListener("DOMContentLoaded", function(e)
  }
 }, false)
 
-function fadeItems()
-{
-    
-    let myItem = document.querySelectorAll('#snapScroll h1');
-    for(let counter =0; counter<myItem.length; counter++)
-    {
-        let trueOrFalse = isInViewport(myItem[counter]);
-        if(trueOrFalse === true)
-        {
-            myItem[counter].style.transform = 'translateY(-50px)';
-        }
-    }
-    
-}
 
-function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
+function fadeItems()
+        {
+            
+            let myItem = document.querySelectorAll('#snapScroll h1');
+            for(let counter =1; counter<myItem.length; counter++)
+            {
+                let trueOrFalse = isInViewport(myItem[counter]);
+                if(trueOrFalse === true)
+                {
+                    myItem[counter].style.transform = 'translateY(-50px)';
+                }
+            }
+            
+        }
+
+        
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
 
 // window.addEventListener("DOMContentLoaded", function(e) {
 
