@@ -179,6 +179,17 @@
     </div>
     <script src="control.js">
 
+window.addEventListener("DOMContentLoaded", function(e)
+{
+ let slideShow = document.getElementById('testSlideShow');
+ let arr = slideShow.getElementsByTagName("div");
+ let fadeComplete = function(e) {slideShow.appendChild(arr[0]);}
+ for(let counter = 0; counter < arr.length; counter++)
+ {
+     arr[counter].addEventListener("animationend", fadeComplete, false);
+ }
+}, false)
+
     </script>
 </body>
 </html>

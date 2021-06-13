@@ -669,28 +669,27 @@ p
     background: rgba(0, 0, 0, .7);
     padding: 40px;
     border: 3px solid white;
-    animation-timing-function: linear;
-    transition-timing-function: linear;
+    animation-timing-function: ease-out;
     animation-duration: 1s;
     transition-duration: 1s;
+    opacity: 0;
 }
 
-.scroll:nth-of-type(n + 1)
-{
-    transform: translateY(50px);
-}
+
 
 
 @keyframes fader
 {
     from
     {
-        transform: translateY(-50px);
+        transform: translateX(-50px);
+        opacity: 0;
     }
     to{
-        transform: translateY(0px);
+        opacity: 1;
+        transform: translateX(0px);
     }
-}
+} 
 
 @keyframes rotation{
     from

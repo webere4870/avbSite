@@ -1,9 +1,28 @@
 let initialDisplay = document.querySelector('.animationControl');
 initialDisplay.style.display = 'none';
-
+let scrollTimer = -1;
 let scrollAnimation = document.getElementById('snapScroll');
 
-document.addEventListener("scroll", fadeItems);
+function bodyScroll() {
+
+    if (scrollTimer != -1)
+        clearTimeout(scrollTimer);
+
+    scrollTimer = window.setTimeout(fadeItems, 1);
+}
+
+function fadeItems()
+{
+    let height = window.innerHeight;
+    let getPosition = scrollAnimation.getBoundingClientRect().top + scrollAnimation.scrollTop;
+    let initiateIndex = Math.floor((getPosition / height));
+    let h1List = document.querySelectorAll('.scroll h1');
+    console.log(`Window height: ${height}px`);
+    console.log(`Initiating index ${initiateIndex}`);
+    h1List[initiateIndex].style.animationName = 'fader';
+    h1List[initiateIndex].style.opacity = '1';
+}
+
 
 window.onload = async function()
  {
@@ -26,32 +45,25 @@ window.onload = async function()
     }
  }
 
-window.addEventListener("DOMContentLoaded", function(e)
-{
- let slideShow = document.getElementById('testSlideShow');
- let arr = slideShow.getElementsByTagName("div");
- let fadeComplete = function(e) {slideShow.appendChild(arr[0]);}
- for(let counter = 0; counter < arr.length; counter++)
- {
-     arr[counter].addEventListener("animationend", fadeComplete, false);
- }
-}, false)
 
 
-function fadeItems()
-        {
+
+// function fadeItems()
+//         {
             
-            let myItem = document.querySelectorAll('#snapScroll h1');
-            for(let counter =1; counter<myItem.length; counter++)
-            {
-                let trueOrFalse = isInViewport(myItem[counter]);
-                if(trueOrFalse === true)
-                {
-                    myItem[counter].style.transform = 'translateY(-50px)';
-                }
-            }
+//             let myItem = document.querySelectorAll('#snapScroll h1');
+//             for(let counter =1; counter<myItem.length; counter++)
+//             {
+//                 let trueOrFalse = isInViewport(myItem[counter]);
+//                 if(trueOrFalse === true)
+//                 {
+//                     myItem[counter].style.transform = 'translateY(-50px)';
+//                 }
+//             }
             
-        }
+//         }
+
+
 
         
         function isInViewport(element) {
